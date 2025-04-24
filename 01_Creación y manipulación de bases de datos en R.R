@@ -29,12 +29,11 @@ View(datos_clientes_gym)
 
 clientes_fuera_rango <- datos_clientes_gym[datos_clientes_gym$IMC < 18.5 | datos_clientes_gym$IMC > 24.9, ]
 
-
 View(clientes_fuera_rango)
 
 # 1.4 Ordena los clientes según su peso de forma descendente.
 
-datos_clientes_gym %>%
+datos_clientes_ordenados <- datos_clientes_gym %>%
   arrange(desc(peso))
 
 # 1.5 Crea una nueva variable categórica que clasifique a los clientes en 

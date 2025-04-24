@@ -120,7 +120,7 @@ ggplot(datos_clientes_general, aes(x = objetivo, fill = objetivo)) +
   labs(title = "Clientes por objetivo de entrenamiento") +
   theme_minimal()
 
-# 5.6 Exporta un gráfico en formato PNG y guárdalo en tu computadora.
+# 5.7 Exporta un gráfico en formato PNG y guárdalo en tu computadora.
 
 grafico_objetivo <- ggplot(datos_clientes_general, aes(x = objetivo, fill = objetivo)) +
   geom_bar() +

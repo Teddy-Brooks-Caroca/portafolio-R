@@ -50,6 +50,12 @@ datos_clientes_general$peso_z <- scale(datos_clientes_general$peso)
 
 # 4.6 Une dos bases de datos distintas sobre clientes y sus historiales médicos.
 
+df_historial <- data.frame(
+  ID = 1:nrow(datos_clientes_general),
+  Presion = sample(c("Normal", "Alta", "Baja"), size = nrow(datos_clientes_general), replace = TRUE),
+  Colesterol = sample(c("Normal", "Alto"), size = nrow(datos_clientes_general), replace = TRUE)
+)
+
 left_join(datos_clientes_general,df_historial, by = "ID") 
 
 # 4.7 Genera una tabla resumen con group_by() y summarise().
